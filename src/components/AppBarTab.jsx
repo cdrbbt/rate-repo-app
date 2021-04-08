@@ -1,17 +1,18 @@
 import React from 'react';
-import { Pressable, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Link } from 'react-router-native';
 import Text from './Text';
 
-const AppBarTab = ({ label }) => {
+const AppBarTab = ({ label, link }) => {
 
   const styles = StyleSheet.create({
     button: {
-      margin: 10,
+      padding: 10,
     }
   });
 
   return (
-    <Pressable style={styles.button}>
+    <Link to={link} underlayColor="#00000040" style={styles.button}>
       <Text 
         style={styles.text}
         color="primary"
@@ -20,7 +21,7 @@ const AppBarTab = ({ label }) => {
       >
         {label}
       </Text>
-    </Pressable>
+    </Link>
   );
 };
 

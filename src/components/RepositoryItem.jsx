@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import RepositorySocialDetails from './RepositorySocialDetails'
+import RepositorySocialDetails from './RepositorySocialDetails';
 import RepositoryBaseInfo from './RepositoryBaseInfo';
 import theme from '../theme';
 
