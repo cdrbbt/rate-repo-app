@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 
 const RepositoryBaseInfo = ({ image, name, description, language }) => {
   return(
-    <View style={styles.container}>
+    <View style={styles.container} testID="baseInfo">
       <Image source={{uri: image}} style={styles.repoImg}/>
       <View style={styles.containerData}>
       <Text fontWeight="bold">{name}</Text>

@@ -20,9 +20,9 @@ const Detail = ({ lable, number }) => {
   });
 
   return (
-    <View style={styles.container}>
-    <Text fontWeight="bold">{format(number)}</Text>
-    <Text color="textSecondary">{lable}</Text>
+    <View style={styles.container} testID="socialData">
+      <Text fontWeight="bold">{format(number)}</Text>
+      <Text color="textSecondary">{lable}</Text>
     </View>
   );
 };
@@ -37,7 +37,7 @@ const RepositorySocialDetails = ({ stars, forks, reviews, rating }) => {
     }
   });
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="socialInfo">
       <Detail lable="Stars" number={stars}/>
       <Detail lable="Forks" number={forks}/>
       <Detail lable="Reviews" number={reviews}/>

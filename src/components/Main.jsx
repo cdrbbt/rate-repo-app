@@ -4,9 +4,11 @@ import { Route, Switch, Redirect } from 'react-router-native';
 
 import RepositoryList from './RepositoryList';
 import AppBar from './AppBar';
-import SignIn from './SignIn'
+import SignIn from './SignIn';
 import theme from '../theme';
 import SignOut from './SignOut';
+import RepositoryView from './RepositoryView';
+import ReviewForm from './ReviewForm';
 
 const styles = StyleSheet.create({
   container: {
@@ -29,6 +31,12 @@ const Main = () => {
       </Route>
       <Route path="/signOut" exact>
         <SignOut />
+      </Route>
+      <Route path="/createReview" exact>
+        <ReviewForm />
+      </Route>
+      <Route path="/repos/:id">
+        <RepositoryView />
       </Route>
       <Redirect to='/'/>
     </Switch>
