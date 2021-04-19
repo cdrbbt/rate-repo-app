@@ -9,6 +9,7 @@ import theme from '../theme';
 import SignOut from './SignOut';
 import RepositoryView from './RepositoryView';
 import ReviewForm from './ReviewForm';
+import SignUp from './SignUp';
 
 const styles = StyleSheet.create({
   container: {
@@ -28,6 +29,9 @@ const Main = () => {
       </Route>
       <Route path="/signIn" exact>
         <SignIn />
+      </Route>
+      <Route path="/signUp" exact>
+        <SignUp />
       </Route>
       <Route path="/signOut" exact>
         <SignOut />

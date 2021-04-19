@@ -6,9 +6,7 @@ const useCreateReview = () => {
 
   const createReview = async ({ repositoryName, ownerName, rating, text }) => {
     const { data } =  await mutate({ variables: { review: { repositoryName, ownerName, rating: parseInt(rating), text }}});
-    if (data) {
-      console.log.data;   
-    }
+
     return data;
   };
 
